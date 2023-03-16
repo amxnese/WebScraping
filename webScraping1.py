@@ -72,7 +72,7 @@ html = """
 </div>
 """
 soup = BeautifulSoup(html,'lxml')
-one = soup.find("div",class_="one") #<div class="one">...</div>
-two = one.find_next("div") #<div class="two">...</div>
-three = one.find_all_next("div") #<div class="two"></div><div class="three"></div>
+one = soup.find("div",class_="one") #OUTPUt ==> <div class="one">...</div>
+two = one.find_next("div") #OUTPUT ==> <div class="two">...</div>
+three = one.find_all_next("div") #OUTPUt ==> <div class="two"></div><div class="three"></div>
 # the same concept for find_previous and find_all_previous
