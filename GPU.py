@@ -15,8 +15,6 @@ for page in range(pages):
     div = soup.find(class_="item-cells-wrap border-cells items-grid-view four-cells expulsion-one-cell")
     names = div.find_all("a",class_="item-title")
     prices = div.find_all("li",class_="price-current")
-    count1 = []
-    count2 = []
     for name,price in zip(names,prices):
         try:
             item_prices[name.text] = f"${price.strong.text}"
